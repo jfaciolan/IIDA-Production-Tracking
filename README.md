@@ -157,8 +157,8 @@ This repository serves as the single source of truth for:
 
 ## 📊 Data Flow & Traceability
 
-text
 
+```text
 Raw Material → RM-Lot (RAW_RECEIPT_FORM)
     ↓
 Issuance → Status Update (ISSUE_RECORD_FORM)
@@ -170,7 +170,7 @@ Process Steps (PROCESS_STEP_FORM + STOP_RESUME_LOG_FORM)
 Packaging (PACKAGING_FORM)
     ↓
 Lot Closure (LOT_SIGNOFF_FORM)
-
+```
 ---
 
 ## 🛠️ Maintenance & Updates
