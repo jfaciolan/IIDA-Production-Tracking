@@ -1,31 +1,19 @@
-README
 # IIDA Farms Production Documentation & Forms Repository
 
 ## 📋 Project Overview
 
-This repository contains the complete documentation and operational forms for IIDA Farms' turmeric/ginger powder production tracking system. The documentation provides standardized procedures, technical specifications, and ready-to-use forms for all production roles.
+This repository contains the complete documentation system for IIDA Farms' turmeric/ginger powder production tracking. The system provides end-to-end traceability from raw material to finished goods, including material lifecycle management, production process tracking, and quality control documentation.
 
 ---
 
 ## 🗂️ Repository Structure
 
 ```
-root/
-├── README.md                           # This file
-├── docs/                               # Documentation directory
-│   ├── Lot Creation Guide.md          # Lot ID naming conventions and rules
-│   ├── Standard Operating Procedure (SOP).md  # Complete production SOP
-│   ├── Technical Specification.md     # Database schema and data dictionaries
-│   ├── SOP Simulation.md              # Example production run-through
-│   └── forms/                         # Printable forms directory
-│       ├── RAW_RECEIPT_FORM.md        # Raw Material Receiving Form
-│       ├── ISSUE_RECORD_FORM.md       # Raw Material Issuance Form
-│       ├── INGREDIENT_PREP_FORM.md    # Ingredient Preparation Form
-│       ├── PROCESS_STEP_FORM.md       # Process Step Recording Form
-│       ├── STOP_RESUME_LOG_FORM.md    # Stoppage & Resumption Log
-│       ├── PACKAGING_FORM.md          # Packaging & Inventory Form
-│       ├── LOT_CREATION_FORM.md       # Production Lot Creation Form
-│       └── LOT_SIGNOFF_FORM.md        # Production Lot Sign-off Form
+IIDA-Production-Tracking/
+├── README.md                              # This file
+└── docs/
+    ├── Standard Operating Procedures.md   # Complete production SOP V1.0
+    └── Technical Specification.md         # System requirements V1.0
 ```
 
 ---
@@ -34,219 +22,228 @@ root/
 
 This repository serves as the single source of truth for:
 
-1. **Production Procedures**: Standardized workflows for all roles (warehouse, operators, supervisors)
-    
-2. **Lot Tracking**: Consistent lot ID generation and traceability across the value chain
-    
-3. **Data Collection**: Forms that map directly to database fields for accurate data capture
-    
-4. **Quality Assurance**: Compliance and audit requirements for production tracking
-    
+1. **Production Procedures**: Standardized workflows for all roles (warehouse, production, quality control, supervisors)
+2. **Material Lifecycle Tracking**: Complete tracking from receiving through disposal
+3. **Lot Traceability**: Consistent lot numbering and chain-of-custody documentation
+4. **Quality Assurance**: Inspection standards and compliance requirements
+5. **Technical Implementation**: Database schema and system requirements
 
 ---
 
 ## 👥 Target Audience
 
-|Role|Primary Use|
-|---|---|
-|**Warehouse Staff**|RAW_RECEIPT_FORM, ISSUE_RECORD_FORM|
-|**Line Operators**|INGREDIENT_PREP_FORM, PROCESS_STEP_FORM, STOP_RESUME_LOG_FORM, PACKAGING_FORM|
-|**Supervisors**|LOT_CREATION_FORM, LOT_SIGNOFF_FORM|
-|**Data Encoders**|All forms for data entry verification|
-|**Developers**|Technical Specification for system implementation|
-|**QC/Audit Teams**|SOP for compliance checking|
+| Role | Primary Documents | Key Responsibilities |
+|------|-------------------|----------------------|
+| **Warehouse Staff** | SOP Sections 5.1, Technical Spec Sections 4.1-4.4 | Raw material receiving, issuance, returns, disposal |
+| **Production Operators** | SOP Sections 5.2, Technical Spec Sections 4.6 | Process execution, Production Ledgers completion |
+| **Quality Control** | SOP Section 6, Technical Spec Section 4.6.10 | Quality inspection, defect tracking |
+| **Supervisors** | SOP Sections 5.3, 7, Technical Spec Sections 5-6 | Production planning, KPI monitoring, traceability |
+| **Systems Team** | Technical Specification | System implementation and maintenance |
+| **Auditors** | SOP Sections 8, 10, Technical Spec Sections 7-9 | Compliance verification, traceability audits |
 
 ---
 
 ## 📄 Document Descriptions
 
-### 1. **Lot Creation Guide**
+### 1. **Standard Operating Procedures (V1.0)**
 
-- Defines lot ID naming conventions for RM-Lot, ING-Lot, and LOT-Lot
-    
-- Specifies sequence generation rules and validation criteria
-    
-- Essential for ensuring traceability across the production chain
-    
+**Purpose:** Complete operational guidelines for all production activities
 
-### 2. **Standard Operating Procedure (SOP)**
+**Contents:**
+- Complete material lifecycle workflow (receiving → production → disposal)
+- Lot numbering system with date codes
+- Step-by-step procedures for all roles
+- Quality control standards and inspection procedures
+- Key Performance Indicator calculations
+- Documentation and record keeping requirements
+- Training and audit procedures
+- Troubleshooting and escalation guides
 
-- Complete step-by-step instructions for all production activities
-    
-- Defines roles, responsibilities, and data recording rules
-    
-- Includes KPI calculations and compliance requirements
-    
+**Key Features:**
+- Visual workflow diagrams
+- Role-based procedure tables
+- Real-time documentation requirements
+- Cross-document validation rules
+- Complete traceability chain documentation
 
-### 3. **Technical Specification**
+### 2. **Technical Specification (V1.0)**
 
-- Database schema with updated ER diagrams
-    
-- Process-level data dictionaries for form design
-    
-- KPI formulas and source field mappings
-    
-- Implementation guidelines for developers
-    
+**Purpose:** Technical requirements for digital system implementation
 
-### 4. **SOP Simulation**
+**Contents:**
+- Field-level specifications for all documents (WHSE-01 to WHSE-04, DT-01, Production Ledgers)
+- Data validation rules and business logic
+- Cross-document reference requirements
+- KPI calculation formulas with source mappings
+- System integration and reporting requirements
+- Security, access control, and audit trail specifications
+- Data retention and archival requirements
 
-- Example production run-through demonstrating form usage
-    
-- Timeline-based workflow showing real-world application
-    
-- Cross-references between forms and process steps
-    
-
----
-
-## 🖨️ Form Usage Guide
-
-### Printing Instructions
-
-1. Each form is provided in Markdown format for easy conversion
-    
-2. Recommended print settings:
-    
-    - Paper: A4 or Letter
-        
-    - Orientation: Portrait (most forms), Landscape (PROCESS_STEP_FORM if needed)
-        
-    - Margins: Normal (1 inch / 2.5cm)
-        
-3. Print in sufficient quantities for daily operations
-    
-
-### Form Distribution
-
-|Form|Copies per Shift|Storage Location|
-|---|---|---|
-|RAW_RECEIPT_FORM|10|Warehouse Receiving Desk|
-|ISSUE_RECORD_FORM|20|Warehouse Issuance Station|
-|INGREDIENT_PREP_FORM|15|Ingredient Prep Station|
-|PROCESS_STEP_FORM|20|Each Process Station|
-|STOP_RESUME_LOG_FORM|30|All Production Stations|
-|PACKAGING_FORM|15|Packaging Station|
-|LOT_CREATION_FORM|5|Supervisor Office|
-|LOT_SIGNOFF_FORM|5|Supervisor Office|
+**Key Features:**
+- Complete field mapping matrix
+- Data type and validation specifications
+- Business rule definitions
+- Implementation phase requirements
+- Compliance and audit requirements
 
 ---
 
-## 🔄 Workflow Integration
+## 🔄 Complete Production Workflow
 
-### Typical Production Day Flow:
+### Material Lifecycle Management
 
-1. **Supervisor** creates LOT-Lot using `LOT_CREATION_FORM`
-    
-2. **Warehouse** receives raw material using `RAW_RECEIPT_FORM`
-    
-3. **Warehouse** issues material using `ISSUE_RECORD_FORM`
-    
-4. **Operator** prepares ingredients using `INGREDIENT_PREP_FORM`
-    
-5. **Operator** records process steps using `PROCESS_STEP_FORM`
-    
-6. **Operator** logs stoppages using `STOP_RESUME_LOG_FORM`
-    
-7. **Warehouse/Operator** packages product using `PACKAGING_FORM`
-    
-8. **Supervisor** closes lot using `LOT_SIGNOFF_FORM`
-    
-
----
-
-## 📊 Data Flow & Traceability
-
-
-```text
-Raw Material → RM-Lot (RAW_RECEIPT_FORM)
-    ↓
-Issuance → Status Update (ISSUE_RECORD_FORM)
-    ↓
-Ingredient Prep → ING-Lot (INGREDIENT_PREP_FORM)
-    ↓
-Process Steps (PROCESS_STEP_FORM + STOP_RESUME_LOG_FORM)
-    ↓
-Packaging (PACKAGING_FORM)
-    ↓
-Lot Closure (LOT_SIGNOFF_FORM)
+```mermaid
+graph TD
+    A[Raw Material Receiving] --> B[WHSE-01 Recording]
+    B --> C[Storage & Inventory]
+    C --> D[Material Issuance to Production]
+    D --> E[WHSE-03 Recording]
+    E --> F[Production Processes]
+    F --> G{Material Status}
+    G -->|Unused| H[Material Return]
+    G -->|Used| I[Production Continuation]
+    H --> J[WHSE-02 Recording]
+    J --> K{Condition Assessment}
+    K -->|Usable| C
+    K -->|Unusable| L[Disposal Process]
+    L --> M[WHSE-04 Recording]
+    I --> N[Production Completion]
+    N --> O[Quality Inspection]
+    O --> P[Finished Goods]
 ```
+
+### Production Process Flow
+
+1. **Planning** → 2. **Ingredient Preparation** → 3. **Washing** → 4. **Juicing** → 5. **Cooking** → 6. **Drying** → 7. **Pulverizing** → 8. **Sieving** → 9. **Packaging** → 10. **Inspection**
+
+---
+
+## 📊 Key Performance Indicators
+
+| KPI | Formula | Target | Data Source |
+|-----|---------|--------|-------------|
+| Quality Performance | (Defective ÷ Inspected) × 100 | ≤3% | 10_Inspection sheet |
+| Production Yield | (Actual ÷ Target) × 100 | ≥95% | 01_Planning sheet |
+| Raw Material Utilization | (Issued ÷ Received) × 100 | ≥90% | WHSE-01, WHSE-03 |
+| Return Rate | (Returned ÷ Issued) × 100 | ≤10% | WHSE-02, WHSE-03 |
+| Disposal Rate | (Disposed ÷ Received) × 100 | ≤5% | WHSE-04, WHSE-01 |
+| Downtime Percentage | (Downtime ÷ Production) × 100 | ≤5% | DT-01, 01_Planning |
+
+---
+
+## 🏗️ System Architecture
+
+### Document Relationships
+
+```
+WHSE-01 (Receiving) → WHSE-03 (Issuance) → Production Ledgers
+                    ↓
+WHSE-02 (Returns) → WHSE-03 (Re-issuance)
+                    ↓
+WHSE-04 (Disposal)
+```
+
+### Cross-Document Validation
+
+- WHSE-02 references WHSE-03
+- WHSE-03 references WHSE-01
+- WHSE-04 references WHSE-01 (and WHSE-02 if applicable)
+- Production Ledgers reference WHSE-03
+
+---
+
+## 📝 Document Completion Standards
+
+### All Documents Must Have:
+1. **Complete Information** - All fields filled or marked N/A
+2. **Legible Writing** - Clear, readable entries
+3. **Accurate Data** - Verified against actual operations
+4. **Proper Signatures** - Received By and Endorsed By (different persons)
+5. **Timestamps** - Actual times of transactions
+6. **Valid Cross-References** - Correct document references
+
+### Timing Requirements:
+- Warehouse transactions: Recorded immediately
+- Production steps: Recorded as they occur
+- Downtime: Recorded immediately when it occurs
+- Quality inspection: Recorded upon completion
+- All documents: Submitted within 24 hours
+
+---
+
+## 🔒 Quality & Compliance
+
+### Traceability Requirements
+For any Production Lot Number, system must provide:
+1. Raw material sources (WHSE-01)
+2. Material issuance records (WHSE-03)
+3. Production process records (Production Ledgers)
+4. Quality inspection results (10_Inspection)
+5. Any returns (WHSE-02) or disposals (WHSE-04)
+6. Any downtime (DT-01)
+
+### Audit Preparedness
+- Monthly mock audit exercises
+- 15-minute document retrieval target
+- Complete traceability verification
+- Gap identification and correction
+
 ---
 
 ## 🛠️ Maintenance & Updates
 
 ### Version Control
-
-- Document version numbers are specified in each file header
-    
-- Major changes require review by production manager and IT lead
-    
-- Update version numbers when modifying forms or procedures
-    
+- Document version numbers in file headers
+- Major changes require production manager approval
+- Update training materials when procedures change
 
 ### Update Process
-
-1. Create feature branch for changes
-    
-2. Update relevant documents and forms
-    
-3. Test with production team (if applicable)
-    
-4. Merge to main branch after approval
-    
-5. Notify all stakeholders of changes
-    
+1. Identify need for change
+2. Update relevant documents
+3. Review with stakeholders
+4. Update version numbers
+5. Train affected staff
+6. Archive previous versions
 
 ---
 
 ## 📞 Contact & Support
 
-|Role|Contact|Responsibility|
-|---|---|---|
-|Systems Designer|John Rey Faciolan|SOP changes, form updates|
-
+| Role | Contact | Responsibility |
+|------|---------|----------------|
+| Systems Designer | John Rey Faciolan | Documentation, SOP updates |
 
 ---
 
 ## ⚠️ Important Notes
 
-1. **Do not modify form fields** without updating the corresponding Technical Specification
-    
-2. **Lot numbering rules** must be strictly followed for traceability
-    
-3. **All status changes** must be recorded in the history section of relevant forms
-    
-4. **Forms must be completed in real-time** during production activities
-    
-5. **Completed forms** should be submitted to data encoders within 24 hours
-    
+1. **Fresh vs. Returned Materials**: "Fresh" means raw material from warehouse receipt; "Returned" means material previously issued to production
+2. **FIFO Implementation**: Returned materials have priority reissue over fresh materials
+3. **Real-time Documentation**: All transactions must be recorded as they occur
+4. **Cross-Validation**: All document references must be validated
+5. **Signature Requirements**: Received By and Endorsed By must be different persons
+6. **Retention Period**: Paper documents - 2 years minimum; Digital records - 7 years minimum
 
 ---
 
-## 🔗 Related Resources
+## 🔗 Document Relationships
 
-- Production Dashboard: -
-    
-- Database Schema: -
-    
-- Training Materials: -
-    
-- Audit Checklists: -
-    
+```
+Standard Operating Procedures
+    ↓
+Provides operational guidelines for
+    ↓
+Technical Specification
+    ↑
+Defines implementation requirements for
+    ↓
+Production Tracking System
+```
 
 ---
 
 ## 📝 Changelog
 
-|Date|Version|Changes|Author|
-|---|---|---|---|
-|2024-06-15|1.0|Initial repository setup|[Your Name]|
-|2024-06-15|1.0|Added all forms and documentation|[Your Name]|
-
----
-
-## 📄 License
-
-This documentation is proprietary to John Rey Faciolan. Unauthorized distribution or modification is prohibited.
-
-© 2024 John Rey Faciolan. All rights reserved.
+| Date | Version | Changes | Author |
+|------|---------|---------|--------|
+| 2024-06-15 | 1.0 | Added SOP and Technical Specification | John Rey Faciolan |
