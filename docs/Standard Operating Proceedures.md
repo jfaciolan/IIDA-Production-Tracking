@@ -1,11 +1,11 @@
 # IIDA FARMS PRODUCTION TRACKING SYSTEM
 ## STANDARD OPERATING PROCEDURE (VERSION 1.0)
 
-**Document Version:** 1.0  
-**Effective Date:** _______________  
-**Author:** John Rey Faciolan
-**Position: Analytics and Automation Consultant** 
-**Approved By:** _______________
+- **Document Version:** 1.0  
+- **Effective Date:** _______________  
+- **Author:** John Rey Faciolan
+- **Position: Analytics and Automation Consultant** 
+- **Approved By:** _______________
 
 ---
 
